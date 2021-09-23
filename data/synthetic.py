@@ -9,7 +9,6 @@ This script generates sinusoidal synthetic data
 
 from __future__ import division
 import numpy as np
-from math import pi
 
 
 def sine_data_generation(no, seq_len, dim, freq_scale=1):

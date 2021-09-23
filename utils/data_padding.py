@@ -5,8 +5,6 @@ from __future__ import absolute_import, division, print_function
 
 
 import numpy as np
-from copy import deepcopy
-import time
 import sys
 
 if not sys.warnoptions:

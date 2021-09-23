@@ -9,12 +9,7 @@ This script contains torch implementation for a vanilla RNN
 
 from __future__ import absolute_import, division, print_function
 
-import pickle
-
-from sklearn.preprocessing import StandardScaler
 import numpy as np
-from copy import deepcopy
-import time
 
 import sys
 
@@ -26,12 +21,8 @@ if not sys.warnoptions:
 import torch
 from torch import nn
 from torch.autograd import Variable
-import torchvision.datasets as dsets
-import torchvision.transforms as transforms
-from torch.autograd import grad
-import scipy.stats as st
 
-from utils.data_padding import *
+from utils.data_padding import padd_arrays, unpadd_arrays
 
 import sys
 

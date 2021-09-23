@@ -11,7 +11,7 @@ from __future__ import absolute_import, division, print_function
 import numpy as np
 import torch
 import torch.nn as nn
-from filters.spectral import *
+from filters.spectral import SpectralFilter, AttentionFilter
 from fourier.transforms import DFT
 
 from torch.distributions.multivariate_normal import MultivariateNormal

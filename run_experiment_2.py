@@ -5,9 +5,6 @@
 from __future__ import absolute_import, division, print_function
 
 import argparse
-import logging
-import os
-
 
 import numpy as np
 import scipy.stats as st
@@ -18,11 +15,10 @@ import warnings
 warnings.filterwarnings("ignore")
 
 
-from utils.spectral import *
-from SequentialFlows import *
+from SequentialFlows import FourierFlow, RealNVP
 
-from metrics.PRcurve import *
-from metrics.MAE import *
+from metrics.PRcurve import computeF1
+from metrics.MAE import computeMAE
 
 
 def MinMaxScaler(data):

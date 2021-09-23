@@ -6,17 +6,12 @@ from __future__ import absolute_import, division, print_function
 
 import numpy as np
 import torch
-from copy import deepcopy
-import time
 import sys
 
 if not sys.warnoptions:
     import warnings
 
     warnings.simplefilter("ignore")
-
-import itertools
-import pickle
 
 
 def autoregressive(X, w):

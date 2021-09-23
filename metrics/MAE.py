@@ -3,7 +3,9 @@
 
 
 from __future__ import absolute_import, division, print_function
-from models.sequential import *
+import numpy as np
+
+from models.sequential import RNNmodel
 
 
 def train_RNN(X_synth):
