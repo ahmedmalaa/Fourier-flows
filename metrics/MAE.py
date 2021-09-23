@@ -15,7 +15,7 @@ def train_RNN(X_synth):
     X_                   = [X_synth[k][:len(X_synth[k])-1] for k in range(len(X_synth))]
     Y_                   = [X_synth[k][1:] for k in range(len(X_synth))]
     
-    predictive_model.fit(X_, Y_)
+    predictive_model.fit(X_, Y_, verbosity=False)
     
     return predictive_model
 

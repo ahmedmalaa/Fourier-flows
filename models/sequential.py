@@ -171,7 +171,7 @@ class RNNmodel(nn.Module):
         
         return out
     
-    def fit(self, X, Y):
+    def fit(self, X, Y, verbosity=True):
         
         X_padded, _          = padd_arrays(X, max_length=self.MAX_STEPS)
         Y_padded, loss_masks = np.squeeze(padd_arrays(Y, max_length=self.MAX_STEPS)[0], axis=2), np.squeeze(padd_arrays(Y, max_length=self.MAX_STEPS)[1], axis=2)
@@ -210,7 +210,7 @@ class RNNmodel(nn.Module):
                 self.loss.backward(retain_graph=True)              # backpropagation, compute gradients
                 optimizer.step()                                   # apply gradients
 
-                if step % 50 == 0:
+                if (step % 50 == 0) and verbosity:
 
                     print('Epoch: ', epoch, '| train loss: %.4f' % self.loss.data)
         
