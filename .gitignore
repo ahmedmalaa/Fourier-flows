@@ -114,4 +114,5 @@ results/**
 # Config files
 .flake8
 .pylintrc
+.vscode
 pyproject.toml
