@@ -103,8 +103,15 @@ ENV/
 # Data
 data/**
 !data/.keep
+!data/*.py
+!data/**/*.py
 results/**
 !results/.keep
 
 # Pickle files
 *.p
+
+# Config files
+.flake8
+.pylintrc
+pyproject.toml
