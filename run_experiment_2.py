@@ -201,6 +201,10 @@ def run_experiments(T, data_sets, baselines, num_experiments=5, n_samples=10000)
                 elif baseline == "RealNVP":
 
                     model = RealNVP(**model_parameters[baseline][dataset], T=T + 1)
+                
+                else:
+
+                    raise ValueError(f"Baseline {baseline} not implemented.")
 
                 _ = model.fit(X, **train_parameters[baseline][dataset])
 
@@ -218,7 +222,6 @@ def run_experiments(T, data_sets, baselines, num_experiments=5, n_samples=10000)
 
 def main(args):
 
-    T = args.T
     data_sets = args.data_sets
     baselines = args.baselines
 
@@ -238,7 +241,7 @@ def main(args):
 if __name__ == "__main__":
 
     default_data_sets = ["stock", "energy", "lung"]
-    default_baselines = ["Fourier flow"]
+    default_baselines = ["Fourier flow", "RealNVP"]
     parser = argparse.ArgumentParser(description="Fourier Flows")
 
     parser.add_argument("-m", "--data-sets", nargs="+", default=default_data_sets)
