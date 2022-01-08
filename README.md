@@ -29,6 +29,6 @@ Please cite:
   title={Generative Time-series Modeling with Fourier Flows},
   author={Alaa, Ahmed and Chan, Alex James and van der Schaar, Mihaela},
   booktitle={International Conference on Learning Representations},
-  year={2020}
+  year={2021}
 }
 ~~~
